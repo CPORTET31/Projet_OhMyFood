@@ -14,7 +14,6 @@ a, a:hover, a:visited, a:active {
 /*-------  HEADER -----------*/
 
 .header {
-
   text-align: center;
   width: 100%;
   background-color: #45a186;
@@ -73,12 +72,10 @@ a, a:hover, a:visited, a:active {
 .titremenu1 {
   color: #553d1e;
   font-family: "script MT bold";
-  font-size:2em;
+
 }
 
-
 /*-  container2 -*/
-
 
 .titremenu2 {
   background-image: linear-gradient(to right, #f3b42b, #9352e7);
@@ -86,20 +83,16 @@ a, a:hover, a:visited, a:active {
   -webkit-background-clip: text;
   font-family: "adobe arabic";
   margin-top: 0px;
-  font-size:2em;
+
 }
 
-
-
 /*-  container3 -*/
-
 
 .titremenu3 {
   background-image: linear-gradient(to right, #211ee4, #3fc0fc);
   color: transparent;
   -webkit-background-clip: text;
   font-family: "savoye LET";
-  font-size:2em;
 }
 
 
@@ -112,7 +105,6 @@ a, a:hover, a:visited, a:active {
   color: transparent;
   -webkit-background-clip: text;
   font-family: "Allura";
-  font-size:2em;
 }
 
 
