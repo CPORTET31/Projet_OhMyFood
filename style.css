@@ -1,42 +1,35 @@
+/*------------------------------------  MENU PRINCIPAL -----------------------------------*/
+
 /*-------  GENERAL -----------*/
 
-body {
+:root {
+  --color1: #FFDDD9;
+  --color2: #FFF3FE;
+  --color3: #EBEBEB;
+  --color4: #fffdfd;
+  --color5: #FFC827;
+}
 
+body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat',sans-serif;
 }
 
-a, a:hover, a:visited, a:active {
+a {
   text-decoration: none;
-}
-
-.h3 {
-  display: block;
-  font-size: 1.8em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-}
-
-.h2 {
-  font-size: 1.2em;
 }
 
 /*-------  HEADER -----------*/
 
-.header-area {
-
+header {
   text-align: center;
   width: 100%;
   background-color: #45a186;
-  padding-top: 0.9%;
-  font-size: 190%;
+  padding-top: 15px;
 }
 
-.header-area img {
+header img {
   width: 250px;
   height: 82px;
   position: relative;
@@ -116,7 +109,7 @@ i {
 }
 
 .color1 {
-  background-color: #FFDDD9;
+  background-color: var(--color1);
 }
 
 /*-  container2 -*/
@@ -150,6 +143,9 @@ i {
   text-transform: uppercase;
 }
 
+.color2 {
+  background-color: var(--color2)
+}
 
 /*-  container3 -*/
 
@@ -182,7 +178,7 @@ i {
 }
 
 .color3 {
-  background-color: #EBEBEB;
+  background-color: var(--color3)
 }
 
 /*-  container4 -*/
@@ -216,19 +212,16 @@ i {
 }
 
 .color4 {
-  background-color: #FFF3FE;
+  background-color: var(--color4);
 }
 
 /*-------  PROCHAINEMENT -----------*/
 
-  .prochainement {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.prochainement {
   display: flex;
-  -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 100px; 
+  margin-bottom: 100px;
 }
 
 .heading {
@@ -236,6 +229,7 @@ i {
   color: #FEC85F;
   padding: 0px 110px;
   border-radius: 10px;
+  margin-bottom: 50px;
 }
 
 .prochainement h2 {
@@ -245,55 +239,58 @@ i {
   font-size: 2em;
 }
 
-.point1 {
-  animation: point1 1s infinite;
+.point {
+  display: inline-block;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: #FEC85F;
+  margin-right: 5px
 }
 
-@keyframes point1 {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.point2 {
-  animation: point2 1s infinite;
+.pulse-1 {
+  -webkit-animation: pulse .4s ease 0s infinite alternate;
+  animation: pulse .4s ease 0s infinite alternate; 
 }
 
-@keyframes point2 {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.point3 {
-  animation: point3 1s infinite;
+.pulse-2 {
+  -webkit-animation: pulse .4s ease .2s infinite alternate;
+  animation: pulse .4s ease .2s infinite alternate; 
 }
 
-@keyframes point3 {
-  0% {
-    opacity: 0;
+.pulse-3 {
+  -webkit-animation: pulse .4s ease .4s infinite alternate;
+  animation: pulse .4s ease .4s infinite alternate; 
+}
+
+@-webkit-keyframes pulse {
+  from {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1); 
   }
-  50% {
-    opacity: 0;
+  to {
+      opacity: .25;
+      -webkit-transform: scale(0.75);
+              transform: scale(0.75); 
   }
-  100% {
-    opacity: 1;
+}
+@keyframes pulse {
+  from {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1); 
   }
+  to {
+      opacity: .25;
+      -webkit-transform: scale(0.75);
+      transform: scale(0.75); 
+  } 
 }
 
 /*-------  FOOTER -----------*/
 
-.footer {
+footer {
   background-color: #45a186;
   bottom: 0;
   left: 0;
@@ -302,56 +299,121 @@ i {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
 }
 
-.footer h4 {
-  font-weight:200;
+footer a {
+  text-decoration: none;
+  color: #FEC85F; 
 }
 
 .mentions {
-  color: #FFC827;
-  margin-left: 50px;
-}
-
-.mentions:hover {
-  color: #ffffff;
+margin-left: 50px;
 }
 
 .contact {
-  color: #FFC827;
-  margin-right: 50px;
-  text-align: end;
+margin-right: 50px;
 }
 
-.contact:hover {
-  color: #ffffff;
+.mentions:hover, .contact:hover {
+  -webkit-animation: wiggle 5s ease-in;
+  animation: wiggle 5s ease-in; 
+  position: relative;
+}
+            
+
+
+@-webkit-keyframes wiggle {
+0% {
+  left: 0; }
+1% {
+  left: -3px; }
+2% {
+  left: 5px; }
+3% {
+  left: -8px; }
+4% {
+  left: 8px; }
+5% {
+  left: -5px; }
+6% {
+  left: 3px; }
+7% {
+  left: 0; } }
+
+@keyframes wiggle {
+0% {
+  left: 0; }
+1% {
+  left: -3px; }
+2% {
+  left: 5px; }
+3% {
+  left: -8px; }
+4% {
+  left: 8px; }
+5% {
+  left: -5px; }
+6% {
+  left: 3px; }
+7% {
+  left: 0; } }
+
+
+
+@-webkit-keyframes wiggle {
+  0% {
+    left: 0; }
+  1% {
+    left: -3px; }
+  2% {
+    left: 5px; }
+  3% {
+    left: -8px; }
+  4% {
+    left: 8px; }
+  5% {
+    left: -5px; }
+  6% {
+    left: 3px; }
+  7% {
+    left: 0; } }
+
+@keyframes wiggle {
+  0% {
+    left: 0; }
+  1% {
+    left: -3px; }
+  2% {
+    left: 5px; }
+  3% {
+    left: -8px; }
+  4% {
+    left: 8px; }
+  5% {
+    left: -5px; }
+  6% {
+    left: 3px; }
+  7% {
+    left: 0; } }
+
+
+
+
+
+/*--------------------------------------------------- ALL MENU ---------------------------------------------------*/
+
+.title {
+  text-align: center;
+  color: black;
+  margin-top: 70px;
 }
 
-
-/*--------- ALL MENU ------------*/
-tr {
+.backgroundmenu {
   display: flex;
   justify-content: center;
-  padding-bottom: 20px;
-}
-/*---------------------------------------------------- MENU1 -------------------------------------------------------*/
-
-/*-------  tableaux -----------*/
-
-table{
-  border-collapse: collapse;
-  display: flex;
-  justify-content: center;
 }
 
-td{
-  border: 1px solid black;
-  padding: 10px;
-  border: none;
-}
-
-
-/*-------  GENERAL -----------*/
 
 .carte {
   padding: 50px;
@@ -360,190 +422,303 @@ td{
   width: 700px;
 }
 
-.menu1 {
-  font-family: "script MT bold"
-}
-
-/*-  grid -*/
-.backgroundmenu1 {
-  display: grid;
-  justify-content: center;
-}
-
-.note {
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row: 1;
+td a h2{
+  display: block;
+  font-size: 1.4em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  width: 250px;
   text-align: center;
-  padding-top: 5%;
 }
 
-.note h1 {
+td a:after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0;
+  transition: width .5s cubic-bezier(0.87, 0.21, 0.18, 0.93), background-color .5s ease;
+}
+
+td a:hover:after {
+  width: 100%;
+  border-bottom: 2px dashed #45a186
+}
+
+
+/*---------  TABLEAU --------------*/
+
+table, thead, tbody, tfoot {
+  display: block;
+}
+
+td {
+  border: none;
+}
+
+tr {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/*-  Titres tbody -*/
+
+
+.groupetrait2 {
+  display: contents;
+}
+
+.trait1menus {
+  height: 8px;
+  width: 200px;
+  margin: 10px 20px 10px 0px;
+}
+
+.trait2menus {
+  height: 8px;
+  width: 200px;
+  margin: 10px 0px 10px 20px;
+}
+
+/*---------------------------------------------------- MENU1 -------------------------------------------------------*/
+
+/*---------  TABLEAU --------------*/
+
+.case td:nth-child(1) {
+  width:500px;
+  padding-bottom: 20px;
+}
+
+.case td:nth-child(2) {
+  width: 50px;
+  padding-bottom: 20px;
+}
+
+.case tr:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+.case tr:nth-child(6) {
+  margin-bottom: 20px;
+}
+
+.case tr:nth-child(10) {
+  margin-bottom: 20px;
+}
+
+.case tr:nth-child(5) {
+  margin-bottom: 50px;
+}
+
+.case tr:nth-child(9) {
+  margin-bottom: 50px;
+}
+
+
+
+/*-------  CORPS DU MENU1 -----------*/
+
+/*-  Design menu -*/
+
+.menu1 {
+  font-family: "tekton pro";
+}
+
+/*-  Titre thead -*/
+
+.menu1 thead {
+  margin-top: 50px;
+}
+
+.icon {
+  font-size: 5em;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.case h1 {
   color:black;
   font-size: 2.5em;
+  text-align: center;
+  font-family: "script MT bold";
 }
 
-.note i {
-  font-size: 5em;
+/*-  Titres tbody -*/
+
+.trait1menu1 {
+  height: 2px;
+  width: 200px;
+  margin: 10px 0px;
 }
 
-.menunote1 {
-  grid-column: 2;
-  grid-row: 3;
+.trait2menu1 {
+  height: 2px;
+  width: 200px;
+  margin: 10px 0px;
 }
 
-.menunote2 {
-  grid-column: 2;
-  grid-row: 5;
-
-}
-
-.menunote3 {
-  grid-column: 2;
-  grid-row: 7;
-}
-
-.prixnote1 {
-  grid-column: 3;
-  grid-row: 3;
-}
-
-.prixnote2 {
-  grid-column: 3;
-  grid-row: 5;
-}
-
-.prixnote3 {
-  grid-column: 3;
-  grid-row: 7;
-}
-
-/*-------  CONTAINER MENU -----------*/
-
-/*-  Titres -*/
+/*-  Titre tfoot -*/
 
 .titre2menu1 {
   font-family: "script MT bold";
-  font-size: 2em;
+  font-size: 1em;
   text-align: center;
 }
 
 .titre2menu1 i {
   font-size: 1.8em;
   margin-right: 10px;
+  display: inline-block;
 }
 
-.groupetrait {
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 20px;
+
+/*------------------------------------------------ MENU2 ---------------------------------------------------*/
+.menu2 {
+  font-family: "times";
 }
 
-.groupetrait2 {
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 20px;
-}
+/*-  Titre thead -*/
 
-.groupetrait3 {
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-  padding-bottom: 20px;
-}
-
-.groupetrait h2, .groupetrait2 h2, .groupetrait3 h2 {
-  display: block;
-  font-size: 1.5em;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  font-weight: bold;
-  width: 200px;
+.case2 h1 {
+  font-size: 4em;
+  background-image: linear-gradient(to right, #f3b42b, #9352e7);
+  color: transparent;
+  -webkit-background-clip: text;
   text-align: center;
+  margin-block-start: 0.5em;
+  text-align:center;
+  font-family: "adobe arabic";
 }
 
-.trait1menu1 {
-  height: 2px;
-  width: 200px;
-  margin: 20px 60px 10px 0px;
+
+
+/*-  Tableau -*/
+
+.case2 td:nth-child(1) {
+  width:500px;
+  padding-bottom: 10px;
 }
 
-.trait2menu1 {
-  height: 2px;
-  width: 200px;
-  margin: 20px 0px 10px 60px;
+.case2 td:nth-child(2) {
+  width: 50px;
+  padding-bottom: 10px;
 }
 
-.colortextmenu1 {
-  color: #553d1e;
-  font-size: 120%;
+.case2 tr:nth-child(4n+4) {
+  margin-bottom: 30px;
 }
 
-.titresousmenu1 {
-  margin-top: -2px;
-  color: #553d1e;
-  background: linear-gradient(to top, #553d1e 2px, transparent 3px) no-repeat;
-  background-size: 0 100%;
-  transition: background-size 0.3s;
+.case2 tr:nth-child(4n+1) {
+  margin-bottom: 20px;
 }
 
-.titresousmenu1:hover {
-  background-size: 100% 100%;
+.case2 tr:nth-child(-n+4) {
+ color: #DD5F00;
 }
 
-/*-  plats -*/
-
-.menunote1, .menunote2, .menunote3 {
- font-size: small;
- line-height: 1.5;
+.case2 td:nth-child(-n+4):hover:after {
+  width: 100%;
+  background: blue;
 }
 
-.prixnote1, .prixnote2, .prixnote3 {
-  font-size: medium;
-  line-height: 0.8;
+.case2 tr:nth-child(n+5) {
+  color: #A65C99;
 }
 
-.prixnote1 ul, .prixnote2 ul, .prixnote3 ul {
-  padding-inline-start: 0px;
-  padding-inline-end: 40px;
-  float: right;
+.case2 tr:nth-child(n+9) {
+  color: #6C3BA9;
 }
 
-.textmenu {
-  text-align: left;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+/*-------------------------------------- MENU3 -------------------------------------------------*/
+
+.menu3 {
+  font-family: "Bradley Hand";
 }
 
-.front134 {
-  font-family: "Farsan", cursive;
-  display: grid;
-  grid-column-gap: 50px;
-  grid-template-columns: 1fr 1fr;
+/*-  Titre thead -*/
+
+.case3 h1 {
+  background-image: linear-gradient(to right, #211ee4, #3fc0fc);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-size: 4em;
+  text-align:center;
+  font-family: "savoye LET";
 }
 
-.front2 {
-  font-family: "Crimson Pro", serif;
-}
-.title {
-  text-align: center;
-  color: black;
-  margin-top: 70px;
+/*-  Tableau-*/
+
+.case3 td:nth-child(1) {
+  width:500px;
 }
 
-/*-----BODY-----*/
-
-.titresousmenu1 {
-  margin-top: -2px;
-  color: #553d1e;
-  background: linear-gradient(to top, #553d1e 2px, transparent 3px) no-repeat;
-  background-size: 0 100%;
-  transition: background-size 0.3s;
+.case3 td:nth-child(2) {
+  width: 50px;
+  padding-bottom: 15px;
+  font-size: 20px;
 }
 
-.titresousmenu1:hover {
-  background-size: 100% 100%;
+.case3 tr:nth-child(4n+1) {
+  padding-bottom: 30px;
+}
+
+.case3 tr:nth-child(4n+4) {
+  padding-bottom: 50px;
+}
+
+/*-------------------------------------- MENU4 ---------------------------------------------------*/
+
+.menu4 {
+font-family: "Bradley Hand";
+}
+
+/*-  Titre theader -*/
+
+.case4 h1 {
+  background-image: linear-gradient(to right, green, #a5ff71);
+  color: transparent;
+  -webkit-background-clip: text;
+  font-family: "Allura";
+  font-size: 4em;
+  text-align:center;
+}
+
+/*-  Tableau -*/
+
+.case4 td:nth-child(1) {
+  width:500px;
+}
+
+.case4 td:nth-child(2) {
+  width: 50px;
+  padding-bottom: 15px;
+  font-size:20px;
+}
+
+.case4 tr:nth-child(4n+1) {
+  padding-bottom: 30px;
+}
+
+.case4 tr:nth-child(4n+4) {
+  margin-bottom: 50px;
+}
+
+
+/*--------------------------------  MENTIONS LEGALES ----------------------------------------------*/
+
+.mentionslegales {
+margin: 100px;
+}
+
+.mentionslegales h3 {
+padding: 0 0 5px 0;
+border-bottom: 2px solid #FFC827;
+text-transform: uppercase;
+}
+
+.mentionslegales p {
+font-size: 13px;
+text-align: justify;
+line-height: 2;
 }
