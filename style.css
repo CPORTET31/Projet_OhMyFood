@@ -722,3 +722,56 @@ font-size: 13px;
 text-align: justify;
 line-height: 2;
 }
+
+
+/*--------------------------------  MEDIA QUERIES ----------------------------------------------*/
+
+/*----------- MEDIA 900px -----------*/
+@media all and (max-width:900px) {
+
+  .area1 {
+    grid-column: none;
+    grid-row:1 ;
+  }
+
+  .area2 {
+    grid-column: none;
+    grid-row:2 ;
+  }
+
+  .area3 {
+    grid-column: none;
+    grid-row:3 ;
+  }
+
+  .area4 {
+    grid-column: none;
+    grid-row:4 ;
+  }
+}
+
+/*------------ MEDIA 650px ----------*/
+
+@media all and (max-width: 650px) {
+
+  .prochainement h2 {
+    font-size: 1.3em;
+  }
+  
+  .case td:nth-child(2), .case2 td:nth-child(2), .case3 td:nth-child(2), .case4 td:nth-child(2) {
+    width: 40px;
+  }
+
+  .case td:nth-child(1), .case2 td:nth-child(1), .case3 td:nth-child(1), .case4 td:nth-child(1) {
+    width:420px;
+  }
+
+  .trait1menu1, .trait2menu1 {
+    width: 100px;
+  }
+
+  .trait1menus, .trait2menus {
+    width: 100px;
+    height: 4px;
+  }
+}
