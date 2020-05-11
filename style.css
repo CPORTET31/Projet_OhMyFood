@@ -10,6 +10,7 @@
   --color5: #FFC827;
 }
 
+
 body {
   margin: 0;
   padding: 0;
@@ -89,7 +90,7 @@ header img {
 
 .titremenu1 {
   color: #553d1e;
-  font-family: "script MT bold";
+  font-family: "Dancing Script";
   font-size:2em;
 }
 
@@ -104,7 +105,7 @@ i {
   padding-top: 5%;
   color: #553d1e;
   text-transform: uppercase;
-  font-family: "tekton pro";
+  font-family: "Gloria Hallelujah";
   font-size:2.5em;
 }
 
@@ -130,7 +131,7 @@ i {
   background-image: linear-gradient(to right, #f3b42b, #9352e7);
   color: transparent;
   -webkit-background-clip: text;
-  font-family: "adobe arabic";
+  font-family: "Playfair Display";
   margin-top: 0px;
   font-size:2em;
 }
@@ -138,7 +139,7 @@ i {
 .text2 {
   padding-top: 5%;
   color: #f3b42b;
-  font-family: "Times";
+  font-family: "Nanum Myeongjo";
   font-size:2.5em;
   text-transform: uppercase;
 }
@@ -165,14 +166,14 @@ i {
   background-image: linear-gradient(to right, #211ee4, #3fc0fc);
   color: transparent;
   -webkit-background-clip: text;
-  font-family: "savoye LET";
+  font-family: "Allan";
   font-size:2em;
 }
 
 .text3 {
   padding-top: 5%;
   color: #3184e2;
-  font-family: "Bradley Hand";
+  font-family: "Nothing You Could Do";
   font-size:2.5em;
   text-transform: uppercase;
 }
@@ -206,7 +207,7 @@ i {
 .text4 {
   padding-top: 5%;
   color: #019b01;
-  font-family: "Bradley Hand";
+  font-family: "Nothing You Could Do";
   font-size:2.5em;
   text-transform: uppercase;
 }
@@ -449,7 +450,7 @@ tr {
 /*-  Design menu -*/
 
 .menu1 {
-  font-family: "tekton pro";
+  font-family: "Gloria Hallelujah";
 }
 
 /*-  Titre thead -*/
@@ -469,7 +470,7 @@ tr {
   color:black;
   font-size: 2.5em;
   text-align: center;
-  font-family: "script MT bold";
+  font-family: "Dancing Script";
 }
 
 /*-  Titres tbody -*/
@@ -503,7 +504,7 @@ tr {
 
 /*------------------------------------------------ MENU2 ---------------------------------------------------*/
 .menu2 {
-  font-family: "times";
+  font-family: "Nanum Myeongjo";
 }
 
 /*-  Titre thead -*/
@@ -516,7 +517,7 @@ tr {
   text-align: center;
   margin-block-start: 0.5em;
   text-align:center;
-  font-family: "adobe arabic";
+  font-family: "Playfair Display";
 }
 
 
@@ -561,7 +562,7 @@ tr {
 /*-------------------------------------- MENU3 -------------------------------------------------*/
 
 .menu3 {
-  font-family: "Bradley Hand";
+  font-family: "Nothing You Could Do";
 }
 
 /*-  Titre thead -*/
@@ -572,7 +573,7 @@ tr {
   -webkit-background-clip: text;
   font-size: 4em;
   text-align:center;
-  font-family: "savoye LET";
+  font-family: "Allan";
 }
 
 /*-  Tableau-*/
@@ -598,7 +599,7 @@ tr {
 /*-------------------------------------- MENU4 ---------------------------------------------------*/
 
 .menu4 {
-font-family: "Bradley Hand";
+font-family: "Nothing You Could Do";
 }
 
 /*-  Titre theader -*/
@@ -655,7 +656,7 @@ line-height: 2;
 /*--------------------------------  MEDIA QUERIES ----------------------------------------------*/
 
 /*----------- MEDIA 900px -----------*/
-@media all and (max-width:900px) {
+@media screen and (max-width:900px) {
 
   .area1 {
     grid-column: none;
@@ -678,9 +679,34 @@ line-height: 2;
   }
 }
 
+@media screen and (max-device-width:900px) {
+
+  .area1 {
+    grid-column: none;
+    grid-row:1 ;
+  }
+
+  .area2 {
+    grid-column: none;
+    grid-row:2 ;
+  }
+
+  .area3 {
+    grid-column: none;
+    grid-row:3 ;
+  }
+
+  .area4 {
+    grid-column: none;
+    grid-row:4 ;
+  }
+}
+
+
+
 /*------------ MEDIA 650px ----------*/
 
-@media all and (max-width: 650px) {
+@media screen and (max-width: 650px) {
 
   .prochainement h2 {
     font-size: 1.3em;
@@ -692,6 +718,7 @@ line-height: 2;
 
   .case td:nth-child(1), .case2 td:nth-child(1), .case3 td:nth-child(1), .case4 td:nth-child(1) {
     width:420px;
+    margin-right: 20px;
   }
 
   .trait1menu1, .trait2menu1 {
@@ -703,3 +730,31 @@ line-height: 2;
     height: 4px;
   }
 }
+
+@media screen and (max-device-width: 650px) {
+
+  .prochainement h2 {
+    font-size: 1.3em;
+  }
+  
+  .case td:nth-child(2), .case2 td:nth-child(2), .case3 td:nth-child(2), .case4 td:nth-child(2) {
+    width: 40px;
+  }
+
+  .case td:nth-child(1), .case2 td:nth-child(1), .case3 td:nth-child(1), .case4 td:nth-child(1) {
+    width:420px;
+    margin-right: 20px;
+  }
+
+  .trait1menu1, .trait2menu1 {
+    width: 100px;
+  }
+
+  .trait1menus, .trait2menus {
+    width: 100px;
+    height: 4px;
+  }
+}
+
+
+
