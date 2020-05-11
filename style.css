@@ -133,7 +133,7 @@ i {
   -webkit-background-clip: text;
   font-family: "Playfair Display";
   margin-top: 0px;
-  font-size:2em;
+  font-size:1.5em;
 }
 
 .text2 {
@@ -478,13 +478,13 @@ tr {
 .trait1menu1 {
   height: 2px;
   width: 200px;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 .trait2menu1 {
   height: 2px;
   width: 200px;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 
 /*-  Titre tfoot -*/
